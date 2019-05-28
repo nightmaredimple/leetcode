@@ -1,19 +1,27 @@
-#include "gtest\gtest.h"
+#include <iostream>
+#include <string>
+#include <unordered_map>
 
-int fun(int a, int b)
+int main()
 {
-	return (a - b);
-}
+	std::unordered_map<std::string, std::string> mymap;
 
-TEST(fun, case1)
-{
-	EXPECT_LT(-2, fun(1, 2));
-	EXPECT_EQ(-1, fun(1, 2));
-	ASSERT_LT(-2, fun(1, 2));
-	ASSERT_EQ(-1, fun(1, 2));
-}
-int main(int argc, char **argv)
-{
-	testing::InitGoogleTest(&argc, argv);
-	return RUN_ALL_TESTS();
+	mymap["Bakery"] = "Barbara";  // new element inserted
+	mymap["Seafood"] = "Lisa";    // new element inserted
+	mymap["Produce"] = "John";    // new element inserted
+
+	std::string name = mymap["Bakery"];   // existing element accessed (read)
+	mymap["Seafood"] = name;              // existing element accessed (written)
+
+	mymap["Bakery"] = mymap["Produce"];   // existing elements accessed (read/written)
+
+	name = mymap["Deli"];      // non-existing element: new element "Deli" inserted!
+
+	mymap["Produce"] = mymap["Gifts"];    // new element "Gifts" inserted, "Produce" written
+
+	for (int i = 0; i < 5;i++) {
+		std::cout << mymap[i]<< std::endl;
+	}
+
+	return 0;
 }

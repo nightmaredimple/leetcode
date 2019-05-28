@@ -34,6 +34,7 @@ public:
 	//时间复杂度: O(n)
 	//空间复杂度: O(n)
 	//level2
+	//insert哈希表，查找一次只需要O(1)
 	vector<int> twoSum2(vector<int>& nums, int target) {
 		vector<int> result;
 		unordered_map<int, int> m;
@@ -56,7 +57,7 @@ public:
 	//时间复杂度: O(n)
 	//空间复杂度: O(n)
 	//level2
-	//利用target-nums[i]: i 的pair对进行索引,即所需值：当前位置
+	//直接插入哈希表
 	vector<int> twoSum3(vector<int> &numbers, int target) {
 		unordered_map<int, int> m;
 		vector<int> result;

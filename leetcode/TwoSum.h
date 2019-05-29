@@ -37,13 +37,13 @@ public:
 	//insert哈希表，查找一次只需要O(1)
 	vector<int> twoSum2(vector<int>& nums, int target) {
 		vector<int> result;
-		unordered_map<int, int> m;
-		unordered_map<int, int>::iterator pos;
+		unordered_map<int, int> m;//无序哈希表
+		unordered_map<int, int>::iterator pos;//迭代器
 		for (int i = 0; i < nums.size(); ++i) {
-			pos = m.find(nums[i]);
-			if (pos == m.end()) {
-				pair<int, int> p(target - nums[i], i);
-				m.insert(p);
+			pos = m.find(nums[i]);//指向哈希表中key=nums[i]的位置指针
+			if (pos == m.end()) {//end()指向哈希表最后一个元素的下一个元素位置
+				//pair<int, int> p(target - nums[i], i);
+				m.insert(make_pair(target - nums[i], i));
 			}
 			else {
 				result.push_back(pos->second);
@@ -58,18 +58,18 @@ public:
 	//空间复杂度: O(n)
 	//level2
 	//直接插入哈希表
-	vector<int> twoSum3(vector<int> &numbers, int target) {
+	vector<int> twoSum3(vector<int> &nums, int target) {
 		unordered_map<int, int> m;
 		vector<int> result;
-		for (int i = 0; i < numbers.size(); i++) {
+		for (int i = 0; i < nums.size(); i++) {
 
-			if (m.find(numbers[i]) == m.end()) {
+			if (m.find(nums[i]) == m.end()) {
 
-				m[target - numbers[i]] = i;
+				m[target - nums[i]] = i;//key=target-nums[i],value=i
 			}
 			else {
 
-				result.push_back(m[numbers[i]]);
+				result.push_back(m[nums[i]]);
 				result.push_back(i);
 				break;
 			}
@@ -77,6 +77,7 @@ public:
 		return result;
 	}
 
-
 };
+
+
 

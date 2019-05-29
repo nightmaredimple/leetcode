@@ -1,27 +1,62 @@
-#include <iostream>
-#include <string>
-#include <unordered_map>
-
+////#include <iostream>
+////#include <string>
+////#include <unordered_map>
+////
+////using namespace std;
+////int main()
+////{
+////	string s = "pwwkew";
+////	unordered_map<char, int> record;
+////	unordered_map<char, int>::iterator pos;
+////
+////	int maxlen = 0;
+////	for (int i = 0; i < s.length(); ++i) {
+////		pos = record.find(s[i]);
+////		if (pos == record.end()) {
+////			record[s[i]] = i;
+////		}
+////		else {
+////			if (record.size() > maxlen)
+////				maxlen = record.size();
+////
+////			record.erase(record.begin(), ++pos);
+////			
+////			record[s[i]] = i;
+////		}
+////		//for (pos = record.begin(); pos != record.end(); pos++)
+////			//cout << pos->first << ":" << pos->second << endl;
+////		//cout << "-----------" << endl;
+////
+////	}
+////	cout << maxlen << endl;
+////	
+////	return 0;
+////}
+//#include <iostream>
+//#include <string>
+//#include <unordered_map>
+//
 //int main()
 //{
 //	std::unordered_map<std::string, std::string> mymap;
 //
-//	mymap["Bakery"] = "Barbara";  // new element inserted
-//	mymap["Seafood"] = "Lisa";    // new element inserted
-//	mymap["Produce"] = "John";    // new element inserted
+//	// populating container:
+//	mymap["U.S."] = "Washington";
+//	mymap["U.K."] = "London";
+//	mymap["France"] = "Paris";
+//	mymap["Russia"] = "Moscow";
+//	mymap["China"] = "Beijing";
+//	mymap["Germany"] = "Berlin";
+//	mymap["Japan"] = "Tokyo";
 //
-//	std::string name = mymap["Bakery"];   // existing element accessed (read)
-//	mymap["Seafood"] = name;              // existing element accessed (written)
+//	// erase examples:
+//	//mymap.erase(mymap.begin());      // erasing by iterator
+//	//mymap.erase("France");             // erasing by key
+//	//mymap.erase(mymap.find("China"), mymap.end()); // erasing by range
 //
-//	mymap["Bakery"] = mymap["Produce"];   // existing elements accessed (read/written)
-//
-//	name = mymap["Deli"];      // non-existing element: new element "Deli" inserted!
-//
-//	mymap["Produce"] = mymap["Gifts"];    // new element "Gifts" inserted, "Produce" written
-//
-//	for (int i = 0; i < 5;i++) {
-//		std::cout << mymap[i]<< std::endl;
-//	}
+//												   // show content:
+//	for (auto& x : mymap)
+//		std::cout << x.first << ": " << x.second << std::endl;
 //
 //	return 0;
 //}

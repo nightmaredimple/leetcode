@@ -36,27 +36,27 @@
 //#include <string>
 //#include <unordered_map>
 //
+//using namespace std;
+//
+//
+//double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+//	vector<int> &arr1 = nums1;
+//	vector<int> &arr2 = nums2;
+//	if (nums1.size() > nums2.size()) {
+//		vector<int> &arr1 = nums2;
+//		vector<int> &arr2 = nums1;
+//	}
+//	cout << arr1.size() << endl;
+//	cout << arr2.size() << endl;
+//	return 0;
+//
+//}
+//
 //int main()
 //{
-//	std::unordered_map<std::string, std::string> mymap;
-//
-//	// populating container:
-//	mymap["U.S."] = "Washington";
-//	mymap["U.K."] = "London";
-//	mymap["France"] = "Paris";
-//	mymap["Russia"] = "Moscow";
-//	mymap["China"] = "Beijing";
-//	mymap["Germany"] = "Berlin";
-//	mymap["Japan"] = "Tokyo";
-//
-//	// erase examples:
-//	//mymap.erase(mymap.begin());      // erasing by iterator
-//	//mymap.erase("France");             // erasing by key
-//	//mymap.erase(mymap.find("China"), mymap.end()); // erasing by range
-//
-//												   // show content:
-//	for (auto& x : mymap)
-//		std::cout << x.first << ": " << x.second << std::endl;
-//
+//	vector<int> nums2 = { 3, 4 };
+//	vector<int> nums1 = { 1, 2, 5, 6 };
+//	double res = findMedianSortedArrays(nums1, nums2);
+//	//cout << res << endl;
 //	return 0;
 //}

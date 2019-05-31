@@ -2,6 +2,7 @@
 #include "TwoSum.h"
 #include "AddTwoNumbers.h"
 #include "LongestSubstringWithoutRepeatingCharacters.h"
+#include "FindMedianSortedArrays.h"
 
 TEST(TwoSum, case1)
 {
@@ -35,6 +36,22 @@ TEST(LongestSubstringWithoutRepeatingCharacters, case3)
 	string c = "pwwkew";
 	EXPECT_EQ(3, s.lengthOfLongestSubstring1(c));
 	EXPECT_EQ(3, s.lengthOfLongestSubstring2(c));
+}
+
+TEST(FindMedianSortedArrays, case4)
+{
+	FindMedianSortedArrays s;
+	vector<int> nums1 = { 1, 3 };
+	vector<int> nums2 = { 2 };
+	double res1 = 2.0;
+	EXPECT_EQ(res1, s.findMedianSortedArrays1(nums1, nums2));
+	EXPECT_EQ(res1, s.findMedianSortedArrays2(nums1, nums2));
+
+	vector<int> nums3 = { 1, 3 };
+	vector<int> nums4 = { };
+	double res2 = 2.0;
+	EXPECT_EQ(res2, s.findMedianSortedArrays1(nums3, nums4));
+	EXPECT_EQ(res2, s.findMedianSortedArrays2(nums3, nums4));
 }
 
 int main(int argc, char **argv) {

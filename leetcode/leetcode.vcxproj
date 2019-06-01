@@ -23,10 +23,19 @@
     <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AddTwoNumbers.h" />
-    <ClInclude Include="FindMedianSortedArrays.h" />
-    <ClInclude Include="LongestSubstringWithoutRepeatingCharacters.h" />
-    <ClInclude Include="TwoSum.h" />
+    <ClInclude Include="13-RomanToInt.h" />
+    <ClInclude Include="171-TitleToNumber.h" />
+    <ClInclude Include="172-TrailingZeroes.h" />
+    <ClInclude Include="2-AddTwoNumbers.h" />
+    <ClInclude Include="204-CountPrimes.h" />
+    <ClInclude Include="268-MissingNumber.h" />
+    <ClInclude Include="326-IsPowerOfThree.h" />
+    <ClInclude Include="4-FindMedianSortedArrays.h" />
+    <ClInclude Include="3-LongestSubstringWithoutRepeatingCharacters.h" />
+    <ClInclude Include="1-TwoSum.h" />
+    <ClInclude Include="63-MySqrt.h" />
+    <ClInclude Include="7-Reverse.h" />
+    <ClInclude Include="202-IsHappy.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{9958B8EC-CE0A-405B-8C1F-D0EAB3261E34}</ProjectGuid>

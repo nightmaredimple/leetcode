@@ -1,8 +1,12 @@
 #include "gtest\gtest.h"
-#include "TwoSum.h"
-#include "AddTwoNumbers.h"
-#include "LongestSubstringWithoutRepeatingCharacters.h"
-#include "FindMedianSortedArrays.h"
+#include "1-TwoSum.h"
+#include "2-AddTwoNumbers.h"
+#include "3-LongestSubstringWithoutRepeatingCharacters.h"
+#include "4-FindMedianSortedArrays.h"
+#include "7-Reverse.h"
+#include "13-RomanToInt.h"
+#include "63-MySqrt.h"
+#include "171-TitleToNumber.h"
 
 TEST(TwoSum, case1)
 {
@@ -53,6 +57,17 @@ TEST(FindMedianSortedArrays, case4)
 	EXPECT_EQ(res2, s.findMedianSortedArrays1(nums3, nums4));
 	EXPECT_EQ(res2, s.findMedianSortedArrays2(nums3, nums4));
 }
+
+TEST(Reverse, case5)
+{
+	Reverse s;
+
+	EXPECT_EQ(21, s.reverse(120));
+	EXPECT_EQ(0, s.reverse(-2147483648));
+
+}
+
+
 
 int main(int argc, char **argv) {
 	testing::InitGoogleTest(&argc,argv);

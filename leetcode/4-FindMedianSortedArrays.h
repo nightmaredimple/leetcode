@@ -112,7 +112,7 @@ public:
 		int total2 = nums2.size();
 		if (total1 > total2)
 			return findMedianSortedArrays2(nums2, nums1);
-		int half = (total1 + total2 + 1) / 2; //如果是(total1 +total2)/2的话，奇数数组中位数出现在右侧最小位置，而且后续需要考虑j=0的情形
+		int half = (total1 + total2 + 1) / 2; //如果是(total1 +total2)/2的话，当total1=0，total2=1时,j=0，需要考虑j-1的问题
 		int imin = 0, imax = total1;
 		int i, j;
 		while (imin <= imax) {

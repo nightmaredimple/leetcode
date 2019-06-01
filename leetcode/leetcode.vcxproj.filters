@@ -23,16 +23,43 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="TwoSum.h">
+    <ClInclude Include="1-TwoSum.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="AddTwoNumbers.h">
+    <ClInclude Include="2-AddTwoNumbers.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="LongestSubstringWithoutRepeatingCharacters.h">
+    <ClInclude Include="3-LongestSubstringWithoutRepeatingCharacters.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="FindMedianSortedArrays.h">
+    <ClInclude Include="4-FindMedianSortedArrays.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="7-Reverse.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="13-RomanToInt.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="63-MySqrt.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="171-TitleToNumber.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="172-TrailingZeroes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="202-IsHappy.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="204-CountPrimes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="268-MissingNumber.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="326-IsPowerOfThree.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

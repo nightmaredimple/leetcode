@@ -42,11 +42,68 @@ C 可以放在 D (500) 和 M (1000) 的左边，来表示 400 和 900。
 解释: M = 1000, CM = 900, XC = 90, IV = 4.
 ************************************************************************************************************************/
 #include<string>
+#include<unordered_map>
 using namespace std;
 
 class RomanToInt {
 public:
-	int romanToInt(string s) {
+	//仅需要考虑4,9这类特殊情况，其他的只需要相加
+	//采用数组的方式存储字典会更快更省内存
+	//最好还是初始化以下m，或者像我一样单独取出i=len-1的情况，因为string最后一位是NULL，对应m[0]，不初始化的话是随机数
+	int romanToInt1(string s) {
+		/*
+		unordered_map<char, int> m;
+		m.insert(make_pair('I', 1));
+		m.insert(make_pair('V', 5));
+		m.insert(make_pair('X', 10));
+		m.insert(make_pair('L', 50));
+		m.insert(make_pair('C', 100));
+		m.insert(make_pair('D', 500));
+		m.insert(make_pair('M', 1000));
+		*/
+		int m[100];
+		m['I'] = 1;
+		m['V'] = 5;
+		m['X'] = 10;
+		m['L'] = 50;
+		m['C'] = 100;
+		m['D'] = 500;
+		m['M'] = 1000;
+		int res = 0;
+		for (int i = 0; i < s.length(); ++i) {
+			if (i == s.length() - 1 || m[s[i]] >= m[s[i + 1]]) {
+				res += m[s[i]];
+			}
+			else {
+				res += m[s[i + 1]] - m[s[i]];
+				i++;
+			}
+		}
+		return res;
+
+	}
+
+	//纯属刷榜行为，因为A对应ascii码65
+	int romanToInt2(string s) {
+		int m[26];
+		m['I' - 65] = 1;
+		m['V' - 65] = 5;
+		m['X' - 65] = 10;
+		m['L' - 65] = 50;
+		m['C' - 65] = 100;
+		m['D' - 65] = 500;
+		m['M' - 65] = 1000;
+		int res = 0;
+		for (int i = 0; i < s.length(); ++i) {
+			if (i == s.length() - 1 || m[s[i] - 65] >= m[s[i + 1] - 65]) {
+				res += m[s[i] - 65];
+			}
+			else {
+				res += m[s[i + 1] - 65] - m[s[i] - 65];
+				i++;
+			}
+		}
+		return res;
 
 	}
 };

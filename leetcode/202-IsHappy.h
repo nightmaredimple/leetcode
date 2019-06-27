@@ -13,3 +13,29 @@
 6^2 + 8^2 = 100
 1^2 + 0^2 + 0^2 = 1
 ************************************************************************************************************************/
+#include<math.h>
+#include<set>
+using namespace std;
+class IsHappy {
+public:
+	bool isHappy(int n) {
+		bool flag = false;
+		int m;
+		int sum;
+		set<int> record;
+		while (n > 1) {
+			record.insert(n);
+			m = n;
+			sum = 0;
+			while (m > 0) {
+				sum += pow(m % 10, 2);
+				m /= 10;
+			}
+			if (record.find(sum) == record.end())
+				n = sum;
+			else
+				return false;
+		}
+		return true;
+	}
+};

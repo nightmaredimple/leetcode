@@ -25,3 +25,18 @@ AB -> 28
 Êä³ö: 701
 ************************************************************************************************************************/
 //mn=m*26+n
+#include<string>
+using namespace std;
+class TitleToNumber {
+public:
+	//A:ascii-64
+	int titleToNumber(string s) {
+		int res = 0;
+		int n = s.length() - 1;
+		for (int i = 0; i < s.length(); ++i) {
+			res += (s[i] - 64) * pow(26, n);
+			n -= 1;
+		}
+		return res;
+	}
+};

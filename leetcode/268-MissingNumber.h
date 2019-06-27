@@ -12,4 +12,18 @@
 说明:
 你的算法应具有线性时间复杂度。你能否仅使用额外常数空间来实现?
 ************************************************************************************************************************/
-//记录最大最小值，元素个数<=极差+1
+
+//最简单的方法就是O(2n)的，一遍记录，一遍查找,所以要线性空间和线性时间
+//判断有没有漏的可以利用等差数列求和n(n+1)/2-sum，仅需要线性时间
+#include<vector>
+using namespace std;
+class MissingNumber {
+public:
+	int missingNumber(vector<int>& nums) {
+		int n = nums.size();
+		long long total = n*(n + 1) / 2;
+		for (int i = 0; i < n; ++i)
+			total -= nums[i];
+		return int(total);
+	}
+};

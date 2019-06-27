@@ -41,9 +41,6 @@
     <ClInclude Include="13-RomanToInt.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="63-MySqrt.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="171-TitleToNumber.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -60,6 +57,24 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="326-IsPowerOfThree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="69-MySqrt.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="29-Divide.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="50-MyPow.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="166-FractionToDecimal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="279-NumSquares.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="8-MyAtoi.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

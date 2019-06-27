@@ -24,7 +24,7 @@ using namespace std;
 
 class FindMedianSortedArrays {
 public:
-	double getmedian(int index, int total, int median, double median_pos, vector<int>& nums, bool flag) {
+	double getmedian(int index, int total, double median, int median_pos, vector<int>& nums, bool flag) {
 		if (median > 0)
 			return (median + nums[index]) / 2.0;
 		else {
